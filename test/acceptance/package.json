@@ -1,0 +1,45 @@
+{
+    "name": "test",
+    "version": "1.0.0",
+    "description": "Automation Test for Carnival Cruises",
+    "main": "index.js",
+    "scripts": {
+        "test:acc": "cross-env wdio wdio-config/local.conf.js",
+        "lint:src": "tslint -c tslint.json 'src/**/*.ts'",
+        "clean": "rm -r allure-results/ screenshots/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/abermudezm/MyTestRepo"
+    },
+    "author": "Alejandro Bermudez",
+    "bin": {
+        "cad_grid_start": "infrastructure/run.js",
+        "cad_grid_stop": "infrastructure/stop.js"
+    },
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "@types/chai": "^4.1.3",
+        "@types/config": "0.0.34",
+        "@types/webdriverio": "^4.10.1",
+        "chai": "^4.1.2",
+        "config": "^1.30.0",
+        "cross-env": "^5.1.5",
+        "lodash": "^4.17.15",
+        "ts-node": "^6.0.3",
+        "tslib": "^1.9.1",
+        "tslint": "^5.10.0",
+        "typescript": "^2.7.2",
+        "wdio-allure-reporter": "^0.6.2",
+        "wdio-cucumber-framework": "2.2.8",
+        "wdio-selenium-standalone-service": "0.0.12",
+        "webdriverio": "^4.13.1",
+        "@types/chance": "^0.7.36",
+        "chance": "^1.0.13",
+        "moment": "^2.19.4",
+        "shelljs": "^0.8.1"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0"
+    }
+}

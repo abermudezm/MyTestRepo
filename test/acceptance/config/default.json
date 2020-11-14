@@ -1,0 +1,6 @@
+{
+    "maxInstances": "1",
+    "stepRetries": {
+      "count": 3
+    }
+  }

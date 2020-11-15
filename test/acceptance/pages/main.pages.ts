@@ -12,6 +12,13 @@ export default class MainPage  {
   get resultWidgets() { return browser.elements(<any>MAIN_PAGE.resultWidgets);}  
   get resultLearnMoreButtons() { return browser.elements(<any>MAIN_PAGE.resultLearnMoreButtons);}  
 
+  // Following gets could be in a different file for Itinerary page
+  get itineraryLink() { return browser.element(<any>MAIN_PAGE.itineraryLink);}  
+  get activitiesLink() { return browser.element(<any>MAIN_PAGE.activitiesLink);}  
+  get roomsLink() { return browser.element(<any>MAIN_PAGE.roomsLink);}  
+  get moreDatesLink() { return browser.element(<any>MAIN_PAGE.moreDatesLink);}  
+  get bookingButton() { return browser.element(<any>MAIN_PAGE.bookingButton);}  
+
   private setOption(opt: string){    
       const option = _.find(this.optionsList.value, option => browser.elementIdText(option.ELEMENT).value === opt);
       browser.elementIdClick(option.ELEMENT);
@@ -29,6 +36,10 @@ export default class MainPage  {
 
   public searchCruises(){
       this.searchCruisesButton.click();
-  } 
+  }
   
+  public openSail(){
+      browser.elementIdClick(this.resultLearnMoreButtons.value[0].ELEMENT);
+  }
+
 }

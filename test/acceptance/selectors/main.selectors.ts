@@ -6,5 +6,12 @@ export const MAIN_PAGE = {
     searchCruisesButton: '.cdc-filters-search-cta',
     resultsLabel: '.sbsc-container__result-count',
     resultWidgets: '.vrg-result-item--result',
-    resultLearnMoreButtons: '.vrgf-learn-more__text'
+    resultLearnMoreButtons: '.vrgf-learn-more__text',
+    
+    // Following selectors could be in a different file for just Itinerary page selectors
+    itineraryLink: '#sm-itin',
+    activitiesLink: '#sm-activities',
+    roomsLink: '#sm-rooms',
+    moreDatesLink: '#sm-more-dates',
+    bookingButton: '#sm-booking-btn',        
 };

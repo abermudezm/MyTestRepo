@@ -24,7 +24,7 @@ exports.config = {
     }],
     sync: true,
     coloredLogs: true,
-    deprecationWarnings: true,
+    deprecationWarnings: false,
     bail: 0,
     screenshotPath: './screenshots',    
     waitforTimeout: 20000,
@@ -68,8 +68,9 @@ exports.config = {
         console.log('||  https://www.carnival.com   ||');
         console.log('||=============================||');
         console.log('');
-        console.log('Video for automation project setup at: ' + new Date());
-        
+        console.log('Video for user story 1 automation at: ' + new Date());
+        console.log('Some pauses were included to see the automation behavior');
+
         if (!fs.existsSync(`${__dirname}/../downloaded_files/`)) {
             fs.mkdirSync(`${__dirname}/../downloaded_files/`);
         }

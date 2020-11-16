@@ -13,12 +13,17 @@ export default class MainPage  {
   get resultLearnMoreButtons() { return browser.elements(<any>MAIN_PAGE.resultLearnMoreButtons);}  
 
   // Following gets could be in a different file for Itinerary page
-  get itineraryLink() { return browser.element(<any>MAIN_PAGE.itineraryLink);}  
-  get activitiesLink() { return browser.element(<any>MAIN_PAGE.activitiesLink);}  
-  get roomsLink() { return browser.element(<any>MAIN_PAGE.roomsLink);}  
-  get moreDatesLink() { return browser.element(<any>MAIN_PAGE.moreDatesLink);}  
-  get bookingButton() { return browser.element(<any>MAIN_PAGE.bookingButton);}  
-
+  get itineraryLink() { return browser.element(<any>MAIN_PAGE.itineraryLink);}
+  get activitiesLink() { return browser.element(<any>MAIN_PAGE.activitiesLink);}
+  get roomsLink() { return browser.element(<any>MAIN_PAGE.roomsLink);}
+  get moreDatesLink() { return browser.element(<any>MAIN_PAGE.moreDatesLink);}
+  get bookingButton() { return browser.element(<any>MAIN_PAGE.bookingButton);}
+  get itineraryTiles() { return browser.elements(<any>MAIN_PAGE.itineraryTiles);}
+  get itineraryLearnMoreButtons() { return browser.elements(<any>MAIN_PAGE.itineraryLearnMoreButtons);}
+  get closeItineraryDetailButton() { return browser.element(<any>MAIN_PAGE.closeItineraryDetailButton);}
+  get itineraryDescriptionTexts() { return browser.elements(<any>MAIN_PAGE.itineraryDescriptionTexts);}
+  get itineraryHeader() { return browser.element(<any>MAIN_PAGE.itineraryHeader);}
+  
   private setOption(opt: string){    
       const option = _.find(this.optionsList.value, option => browser.elementIdText(option.ELEMENT).value === opt);
       browser.elementIdClick(option.ELEMENT);
@@ -40,6 +45,22 @@ export default class MainPage  {
   
   public openSail(){
       browser.elementIdClick(this.resultLearnMoreButtons.value[0].ELEMENT);
+  }
+
+  public openItinerary(){
+      let contents;
+      browser.scroll(0,250);
+
+      // Implicit waits were added to see the behavior of automated code. They can be replaced by explicit waits
+      for (let i = 0; i < this.itineraryLearnMoreButtons.value.length; i++) {
+          browser.elementIdClick(this.itineraryLearnMoreButtons.value[i].ELEMENT);
+          browser.pause(2000);
+          contents = this.itineraryDescriptionTexts.value.length;
+          console.log('Contenidos en itinerario para dia [' + (i+1) + ']: ' + contents);
+          browser.elementIdClick(this.closeItineraryDetailButton.value.ELEMENT);
+          browser.pause(2000);  
+      }
+     
   }
 
 }

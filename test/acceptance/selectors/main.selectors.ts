@@ -13,5 +13,10 @@ export const MAIN_PAGE = {
     activitiesLink: '#sm-activities',
     roomsLink: '#sm-rooms',
     moreDatesLink: '#sm-more-dates',
-    bookingButton: '#sm-booking-btn',        
+    bookingButton: '#sm-booking-btn',
+    itineraryTiles: '.itinerary-day-tile',
+    itineraryLearnMoreButtons: 'button.about-cta',
+    closeItineraryDetailButton: '.close-overlay-white',
+    itineraryDescriptionTexts: '.description-content',
+    itineraryHeader: 'div.tilb-component__column',
 };

@@ -1,3 +1,5 @@
 acceptance/screenshots/
 acceptance/node_modules/
 acceptance/allure-*/
+package-lock.json
+.DS_Store

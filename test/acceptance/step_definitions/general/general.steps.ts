@@ -52,6 +52,6 @@ Then(/^The "(.*)" button is displayed$/, (bookButtonText: string) => {
 });
 
 Then(/^I can check the itinerary detail for each day$/, () => {        
-  mainPage.openItinerary();
+  expect(mainPage.openItinerary()).to.be.true;
   browser.pause(1000);
 });

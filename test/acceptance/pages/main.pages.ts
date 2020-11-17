@@ -57,10 +57,13 @@ export default class MainPage  {
           browser.pause(2000);
           contents = this.itineraryDescriptionTexts.value.length;
           console.log('Contenidos en itinerario para dia [' + (i+1) + ']: ' + contents);
+          if (contents == 0){
+              return false;
+          }
           browser.elementIdClick(this.closeItineraryDetailButton.value.ELEMENT);
           browser.pause(2000);  
       }
-     
+      return true;     
   }
 
 }

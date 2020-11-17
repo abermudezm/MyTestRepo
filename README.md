@@ -16,14 +16,14 @@ Once you have those ones running correctly, please clone the repo:
 git clone git@github.com:abermudezm/MyTestRepo.git
 ```
 
-Then install the dependencies 
+Open the project from MyTestRepo/test folder, then install the dependencies 
 ```shell
 npm install
 ```
 
 Finally you can run the test cases
 ```shell
-cd acceptance
+cd acceptance/
 npm run test:acc
 ```
 

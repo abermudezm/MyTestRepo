@@ -6,7 +6,7 @@ This is a test repo for automation exercises
 
 ### Prerequisites
 IMPORTANT: Please make sure you have installed:
-  - Node >8.9.2 (https://nodejs.org/download/release/v8.9.2/)
+  - Node >10.16.3 (https://nodejs.org/download/release/v10.16.3/)
   - npm >5.5.1 (https://github.com/npm/npm/releases/tag/v5.5.1)
 
 

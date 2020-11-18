@@ -26,4 +26,8 @@ Finally you can run the test cases
 cd acceptance/
 npm run test:acc
 ```
-
+NOTE: If you got issues related to the chrome version, please ensure you are using node 10.16.3, then execute this command:
+```shell
+chromedriver --port=4444 --url-base=/wd/hub --verbose
+```
+Then run the test cases in a new terminal
